@@ -1,14 +1,14 @@
 # WearableComputingGetting-CleaningDataProject-
 Getting and Cleaning Data Course Project, Coursera education
 
-# Operation system: Windows 7 32bit
-# R version:4.3.3.
-# R studio version: 1.1.447 
-# R packages applied:dplyr,readtext,tidyr,readr
-# Raw data folder placed in working directoryis must!
+Operation system: Windows 7 32bit
+R version:4.3.3.
+R studio version: 1.1.447 
+R packages applied:dplyr,readtext,tidyr,readr
+Raw data folder placed in working directoryis must!
 
 
-#Dataset processing steps:
+# Dataset processing steps:
 --------------------------
 #1)the downloading of the material to local drive
 #	using function tempdir(), tempfile(), download.file(), unzip() to get the data to the local drive
