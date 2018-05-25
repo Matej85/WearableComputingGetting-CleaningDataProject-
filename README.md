@@ -17,30 +17,30 @@ Raw data folder placed in working directoryis must!
 2. loading packages needed for the data processing  
 
 3. to setup common/test/train variables to be able to combine  
-	function used: read.table(),mutate(),grep()  
-	common variables applied for test/train data to be processed:  
-		activity_labels - the string edit to be readible and shortened  
-		name_variables - calculated variables to be assigned with mean/std mark:
-			mean_name_variables - integer vector corresponding to "mean" data  
-			std_name_variables - integer vector corresponding to "std" data  
-	temp variables for test/train:
-		train_variables
-		test_variables	 	
+* function used: read.table(),mutate(),grep()  
+* common variables applied for test/train data to be processed:  
+		+ activity_labels - the string edit to be readible and shortened  
+		+ name_variables - calculated variables to be assigned with mean/std mark:  
+			++ mean_name_variables - integer vector corresponding to "mean" data    
+			++ std_name_variables - integer vector corresponding to "std" data    
+* temp variables for test/train:
+		+ train_variables
+		+ test_variables	 	
 
 4. the processing of train data - combining tables together
-	function: grep(),read.table(),full_join(),rename()
-	full_train_variables - dataset created for train data with subject/activity/calculated variables for mean,std
+* function: grep(),read.table(),full_join(),rename()
+* full_train_variables - dataset created for train data with subject/activity/calculated variables for mean,std
 
 5. the processing of test data - combining tables together
-	function: grep(),read.table(),full_join(),rename()
-	full_test_variables - dataset created for test data with subject/activity/calculated variables for mean,std
+* function: grep(),read.table(),full_join(),rename()
+* full_test_variables - dataset created for test data with subject/activity/calculated variables for mean,std
 
 6. Combining test and train datasets
-	using rbind() to combine:
-		full_train_variables
-		full_test_variables
-	function gather() to put all calculated variables into a column "source" and their values to a column "value"
-	output of the combining "full_variables2"
+* using rbind() to combine:
+		+ full_train_variables
+		+ full_test_variables
+* function gather() to put all calculated variables into a column "source" and their values to a column "value"
+* output of the combining "full_variables2"
 
 7. processing of calculated variable names to be able distinquish the data - per the measurement and type
 	temporary variable called "name_variables2" with values from "source" column to be separated (using strsplit() with "split"argument "-") into certain columns to have information about:
