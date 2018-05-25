@@ -8,11 +8,15 @@
 * subject  - 1:30 (subject ID of the experiment)  
 * requested variables in coded format using a separator "." column no.3-68, e.g. mean.time.gyro.body.TRUE.FALSE.Z  
 * format:  
-  
+
+part1	|.|part2	  |.|part3        |.|part4           |.|part5           |.|part6         |.|part7   |
+--------|-|---------------|-|-------------|-|----------------|-|----------------|-|--------------|-|--------|
+type	|.|domain signal  |.|sensor signal|.|motion component|.|jerk signal	|.|magnitude calc|.|axis    |
+mean/std|.|time/frequency |.|acc/gyro	  |.|body/gravity    |.|TRUE/FALSE	|.|TRUE/FALSE	 |.|X/Y/Z/NA|  
 	
 ### calculated average value in unit:  
-* for "acc" in standard gravity units 'g'  
-* "gyro" in radians  
+* for sensor signal "acc" in standard gravity units 'g'  
+* for sensor signal "gyro" in radians  
 
 
 ### All variable colnames in actual order:  
