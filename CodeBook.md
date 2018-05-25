@@ -1,17 +1,18 @@
 ### run%analysis.R tides and cleans raw data and creates a dataset "tidy_data_avg" with below -requested:  
-	* grouped by Activity and Subject  
-	* only calculated variables for "mean()" and "std()"  
-	* average value  
+* grouped by Activity and Subject  
+* only calculated variables for "mean()" and "std()"  
+* average value  
 
 ### in more details, the tidy_data_avg consists of variables:  
-	* activity - STANDING/SITTING/LAYING/WALKING/WALKING DOWN/WALKING UP (activity during the research)  
-	* subject  - 1:30 (subject ID of the experiment)  
-	* requested variables in coded format using a separator "." column no.3-68, e.g. mean.time.gyro.body.TRUE.FALSE.Z  
-	* format: type(mean/std).domain signal(time/frequency).sensor signal(acc/gyro).motion component(body/gravity).jerk signal(TRUE/FALSE).magnitude calc(TRUE/FALSE).axis(X/Y/Z/NA)  
+* activity - STANDING/SITTING/LAYING/WALKING/WALKING DOWN/WALKING UP (activity during the research)  
+* subject  - 1:30 (subject ID of the experiment)  
+* requested variables in coded format using a separator "." column no.3-68, e.g. mean.time.gyro.body.TRUE.FALSE.Z  
+* format:  
+  
 	
 ### calculated average value in unit:  
-	* for "acc" in standard gravity units 'g'  
-	* "gyro" in radians  
+* for "acc" in standard gravity units 'g'  
+* "gyro" in radians  
 
 
 ### All variable colnames in actual order:  
