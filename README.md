@@ -73,6 +73,7 @@ Raw data folder placed in working directoryis must!
 		+ subject  - 1:30 (subject ID of the experiment)  
 		+ requested variables in coded format using a separator "." column no.3-68, e.g. mean.time.gyro.body.TRUE.FALSE.Z  
 		+ format of variable naming:  
+
 part1	|.|part2	  |.|part3        |.|part4           |.|part5           |.|part6         |.|part7   |
 --------|-|---------------|-|-------------|-|----------------|-|----------------|-|--------------|-|--------|
 type	|.|domain signal  |.|sensor signal|.|motion component|.|jerk signal	|.|magnitude calc|.|axis    |
