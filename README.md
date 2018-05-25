@@ -18,7 +18,7 @@ Operation system: Windows 7 32bit
 R version:4.3.3.  
 R studio version: 1.1.447  
 R packages applied:dplyr,readtext,tidyr,readr  
-Raw data folder placed in working directory is must! RAW data link: [link] (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)  
+Raw data folder placed in working directory, link:https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip  
 
 ## Dataset processing steps:
 ----------------------------
