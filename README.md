@@ -67,7 +67,10 @@ Raw data folder placed in working directoryis must!
 		+ measure unit  
 
 8. editing dataset tidy_data to display average value for all requested calculated variables  
-	* the output object as "tidy_data_avg" modified using mutate(),paste(),group_by(),summarise(),spred()  
+	* the output object as "tidy_data_avg" modified using mutate(),paste(),group_by(),summarise(),spred()
+	* calculated average value in unit:  
+		+ for "acc" in standard gravity units 'g'  
+		+ for "gyro" in radians 
 	* the tidy_data_avg with variables:  
 		+ activity - STANDING/SITTING/LAYING/WALKING/WALKING DOWN/WALKING UP (activity during the research)  
 		+ subject  - 1:30 (subject ID of the experiment)  
@@ -78,6 +81,4 @@ part1	|.|part2	  |.|part3        |.|part4           |.|part5           |.|part6 
 --------|-|---------------|-|-------------|-|----------------|-|----------------|-|--------------|-|--------|
 type	|.|domain signal  |.|sensor signal|.|motion component|.|jerk signal	|.|magnitude calc|.|axis    |
 mean/std|.|time/frequency |.|acc/gyro	  |.|body/gravity    |.|TRUE/FALSE	|.|TRUE/FALSE	 |.|X/Y/Z/NA|  
-	* calculated average value in unit:  
-		+ for "acc" in standard gravity units 'g'  
-		+ for "gyro" in radians  
+	 
