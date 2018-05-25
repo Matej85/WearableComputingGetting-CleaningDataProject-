@@ -65,7 +65,7 @@ Raw data folder placed in working directoryis must!
 	* temporarily created variables at this point to be removed, keeping on only "tidy_data" object  
 7. editing dataset tidy_data to display average value for all requested calculated variables  
 	* the output final object is "tidy_data_avg"  
-	* tidy_data modified using mutate(),paste(),group_by(),summarise(),spred()  
+	* tidy_data modified using mutate(),paste(),group_by(),summarise(),spread()  
 	* calculated average value in unit:  
 		+ for "acc" in standard gravity units 'g'  
 		+ for "gyro" in radians 
