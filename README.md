@@ -1,4 +1,4 @@
-# WearableComputingGetting-CleaningDataProject-
+# WearableComputingGetting-CleaningDataProject
 Getting and Cleaning Data Course Project, Coursera education
 
 ## Pre-conditions:
@@ -7,7 +7,6 @@ R version:4.3.3.
 R studio version: 1.1.447  
 R packages applied:dplyr,readtext,tidyr,readr  
 Raw data folder placed in working directoryis must!  
-***
 
 ## Dataset processing steps:
 ----------------------------
