@@ -83,8 +83,3 @@ mean/std|.|time/frequency |.|acc/gyro	  |.|body/gravity    |.|TRUE/FALSE	|.|TRUE
 	* calculated average value in unit:  
 		+ for "acc" in standard gravity units 'g'  
 		+ for "gyro" in radians  
-
-part1	|.|part2	  |.|part3        |.|part4           |.|part5           |.|part6         |.|part7   |
---------|-|---------------|-|-------------|-|----------------|-|----------------|-|--------------|-|--------|
-type	|.|domain signal  |.|sensor signal|.|motion component|.|jerk signal	|.|magnitude calc|.|axis    |
-mean/std|.|time/frequency |.|acc/gyro	  |.|body/gravity    |.|TRUE/FALSE	|.|TRUE/FALSE	 |.|X/Y/Z/NA|
