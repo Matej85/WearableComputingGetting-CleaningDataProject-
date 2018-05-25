@@ -78,3 +78,6 @@ Raw data folder placed in working directoryis must!
 	* calculated average value in unit:  
 		+ for "acc" in standard gravity units 'g'  
 		+ for "gyro" in radians  
+		
+type	|.|domain signal  |.|sensor signal|.|motion component|.|jerk signal	|.|magnitude calc|.|axis
+mean/std|.|time/frequency |.|acc/gyro	  |.|body/gravity    |.|TRUE/FALSE	|.|TRUE/FALSE	 |.|X/Y/Z/NA
