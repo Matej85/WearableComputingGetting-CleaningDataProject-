@@ -10,7 +10,7 @@ Raw data folder placed in working directoryis must!
 
 ## Dataset processing steps:
 ----------------------------
-1. the downloading of the material to local drive using function tempdir(), tempfile(), download.file(), unzip()   
+1. downloading of the material to local drive using function tempdir(), tempfile(), download.file(), unzip()   
 
 2. loading packages needed for the data processing  
 
@@ -25,15 +25,15 @@ Raw data folder placed in working directoryis must!
 		+ train_variables  
 		+ test_variables  	 	
 
-4. the processing of train data - combining tables together  
+4. processing of train data - combining tables together  
 	* functions: grep(),read.table(),full_join(),rename()  
 	* full_train_variables - dataset created for train data with subject/activity/calculated variables for mean,std  
 
-5. the processing of test data - combining tables together  
+5. processing of test data - combining tables together  
 	* functions: grep(),read.table(),full_join(),rename()  
 	* full_test_variables - dataset created for test data with subject/activity/calculated variables for mean,std  
 
-6. Combining test and train datasets  
+6. combining test and train datasets  
 	* using rbind() to combine:  
 		+ full_train_variables  
 		+ full_test_variables  
