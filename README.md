@@ -11,18 +11,17 @@ Raw data folder placed in working directoryis must!
 
 ## Dataset processing steps:
 ----------------------------
-1. the downloading of the material to local drive  
-	using function tempdir(), tempfile(), download.file(), unzip() to get the data to the local drive  
+1. the downloading of the material to local drive using function tempdir(), tempfile(), download.file(), unzip()   
 
 2. loading packages needed for the data processing  
 
 3. to setup common/test/train variables to be able to combine  
 * function used: read.table(),mutate(),grep()  
 * common variables applied for test/train data to be processed:  
-		+ activity_labels - the string edit to be readible and shortened  
-		+ name_variables - calculated variables to be assigned with mean/std mark:  
-			++ mean_name_variables - integer vector corresponding to "mean" data    
-			++ std_name_variables - integer vector corresponding to "std" data    
+	+ activity_labels - the string edit to be readible and shortened  
+	+ name_variables - calculated variables to be assigned with mean/std mark:  
+		+ mean_name_variables - integer vector corresponding to "mean" data    
+		+ std_name_variables - integer vector corresponding to "std" data    
 * temp variables for test/train:  
 		+ train_variables  
 		+ test_variables  	 	
