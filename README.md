@@ -2,9 +2,13 @@
 Getting and Cleaning Data Course Project, Coursera education
 
 Operation system: Windows 7 32bit
+
 R version:4.3.3.
+
 R studio version: 1.1.447 
+
 R packages applied:dplyr,readtext,tidyr,readr
+
 Raw data folder placed in working directoryis must!
 
 
