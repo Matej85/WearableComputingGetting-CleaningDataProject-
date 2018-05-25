@@ -74,10 +74,18 @@ Raw data folder placed in working directoryis must!
 		+ subject  - 1:30 (subject ID of the experiment)  
 		+ requested variables in coded format using a separator "." column no.3-68, e.g. mean.time.gyro.body.TRUE.FALSE.Z  
 		+ format of variable naming:  
-			+ type(mean/std).domain signal(time/frequency).sensor signal(acc/gyro).motion component(body/gravity).jerk signal(TRUE/FALSE).magnitude calc(TRUE/FALSE).axis(X/Y/Z/NA)  
+			+ type(mean/std).domain signal(time/frequency).sensor signal(acc/gyro).motion 
+		component(body/gravity).jerk signal(TRUE/FALSE).magnitude calc(TRUE/FALSE).axis(X/Y/Z/NA)  
+part1	|.|part2	  |.|part3        |.|part4           |.|part5           |.|part6         |.|part7   |
+--------|-|---------------|-|-------------|-|----------------|-|----------------|-|--------------|-|--------|
+type	|.|domain signal  |.|sensor signal|.|motion component|.|jerk signal	|.|magnitude calc|.|axis    |
+mean/std|.|time/frequency |.|acc/gyro	  |.|body/gravity    |.|TRUE/FALSE	|.|TRUE/FALSE	 |.|X/Y/Z/NA|
+
 	* calculated average value in unit:  
 		+ for "acc" in standard gravity units 'g'  
 		+ for "gyro" in radians  
+
+part1	|.|part2	  |.|part3        |.|part4           |.|part5           |.|part6         |.|part7   |
 --------|-|---------------|-|-------------|-|----------------|-|----------------|-|--------------|-|--------|
 type	|.|domain signal  |.|sensor signal|.|motion component|.|jerk signal	|.|magnitude calc|.|axis    |
 mean/std|.|time/frequency |.|acc/gyro	  |.|body/gravity    |.|TRUE/FALSE	|.|TRUE/FALSE	 |.|X/Y/Z/NA|
