@@ -10,11 +10,9 @@ Raw data folder placed in working directoryis must!
 
 ## Dataset processing steps:
 ----------------------------
-1. downloading of the material to local drive using function tempdir(), tempfile(), download.file(), unzip()   
+1. loading packages needed for the data processing  
 
-2. loading packages needed for the data processing  
-
-3. to setup common/test/train variables to be able to combine  
+2. to setup common/test/train variables to be able to combine  
 	* functions: read.table(),mutate(),grep()  
 	* common variables applied for test/train data to be processed:  
 		+ activity_labels - the string edit to be readible and shortened  
@@ -25,30 +23,29 @@ Raw data folder placed in working directoryis must!
 		+ train_variables  
 		+ test_variables  	 	
 
-4. processing of train data - combining tables together  
+3. processing of train data - combining tables together  
 	* functions: grep(),read.table(),full_join(),rename()  
 	* full_train_variables - dataset created for train data with subject/activity/calculated variables for mean,std  
 
-5. processing of test data - combining tables together  
+4. processing of test data - combining tables together  
 	* functions: grep(),read.table(),full_join(),rename()  
 	* full_test_variables - dataset created for test data with subject/activity/calculated variables for mean,std  
 
-6. combining test and train datasets  
+5. combining test and train datasets  
 	* using rbind() to combine:  
 		+ full_train_variables  
 		+ full_test_variables  
 	* function gather() to put all calculated variables into a column "source" and their values to a column "value"  
 	* output of the combining "full_variables2"  
 
-7. processing of calculated variable names to be able distinquish the data - per the measurement and type  
+6. processing of calculated variable names to be able distinquish the data - per the measurement and type  
 	* temporary variable called "name_variables2" with values from "source" column to be separated (using strsplit() with "split"argument "-") into certain columns to have information about:  
 		+ domain signal - time/frequency  
 		+ info - the string e.g. BodyGyroJerkMag (more edit below)  
-		+ type - mean()/std()  
+		+ type - mean/std  
 		+ axis - X/Y/Z/NA  
-	* using merge() merging "full_variables2" with "name_variables2" into merged_data  
-	
-	* the column "info" in merged_data is processed to more details using mutate()/factor()/grepl():  
+	* using merge() merging "full_variables2" with "name_variables2" into merged_data, reference cols "source" & "sourceID"  	
+	* the column "info" in merged_data is processed to get more details about the variable using mutate()/factor()/grepl():  
 		+ sensor signal - acc/gyro  
 		+ motion component - body/gravity  
 		+ jerk signal - TRUE/FALSE  
@@ -56,18 +53,18 @@ Raw data folder placed in working directoryis must!
 	* the output dataset "tidy_data" with variables:  
 		+ activity - STANDING/SITTING/LAYING/WALKING/WALKING DOWN/WALKING UP (activity label performed that was tracing)  
 		+ subject  - 1:30 (an identifier of the subject who carried out the experiment)  
-		+ type - mean/std (type of calculation)  
+		+ type - mean/std (type of calculation in raw data)  
 		+ domain signal - time/frequency      
 		+ sensor signal - acc/gyro (sensor of measurement)      
 		+ motion component - body/gravity  
-		+ jerk signal -  
-		+ magnitude calc -   
-		+ axis - axis that was measured/NA  
-		+ value - measured value  
-		+ measure unit  
-
-8. editing dataset tidy_data to display average value for all requested calculated variables  
-	* the output object as "tidy_data_avg" modified using mutate(),paste(),group_by(),summarise(),spred()
+		+ jerk signal - TRUE/FALSE (body linear acceleration and angular velocity derived in time)  
+		+ magnitude calc - TRUE/FALSE  (magnitude of 3-dimensional signals calculated using the Euclidean norm)  
+		+ axis - X/Y/Z/NA - axis that was measured or NA  
+		+ value - measured/calculated value in raw data  
+		+ measure unit - g/radians    
+	* temporarily created variables at this point to be removed, keeping on only "tidy_data" object  
+7. editing dataset tidy_data to display average value for all requested calculated variables  
+	* the output object as "tidy_data_avg" modified using mutate(),paste(),group_by(),summarise(),spred()  
 	* calculated average value in unit:  
 		+ for "acc" in standard gravity units 'g'  
 		+ for "gyro" in radians 
